@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://conqir0gmj61x"]
+
+[ext_resource type="Script" path="res://scripts/player/Player.gd" id="1_6s2yh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7j3u1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ce1i0"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_6s2yh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_7j3u1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_ce1i0")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.815704, 0.57847, 0, -0.57847, 0.815704, 0, 6.3901, 7.44055)
